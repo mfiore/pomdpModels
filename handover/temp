@@ -1,0 +1,32 @@
+	<Entry>
+	  <Instance>wait notEngaged - * ok</Instance>
+	  <ValueTable>
+	    50 5000 -50
+	  </ValueTable>
+	</Entry>
+	<Entry>
+	  <Instance>wait engaged - * ok</Instance>
+	  <ValueTable>
+	    0 10000 0
+	  </ValueTable>
+	</Entry>
+	<Entry>
+	  <Instance>wait notInterested * * ok</Instance>
+	  <ValueTable>
+	    10
+	  </ValueTable>
+	</Entry>
+	<Entry>
+	  <Instance>engage notEngaged * - expired</Instance>
+	  <ValueTable>
+	    -50 10 10 10
+	  </ValueTable>
+	</Entry>
+	<Entry>
+	  <Instance>abandon - - * expired</Instance>
+	  <ValueTable>
+	    10 10 10
+	    -50 -50 10
+	    -50 -50 10
+	  </ValueTable>
+	</Entry>
