@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Policy version="0.1" type="value" model="../examples/handover/handover6.pomdpx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="policyx.xsd">
+<AlphaVector vectorLength="3" numObsValue="12" numVectors="40">
+<Vector action="3" obsValue="0">200 190 190 </Vector>
+<Vector action="0" obsValue="0">190 189.088 190.854 </Vector>
+<Vector action="2" obsValue="0">190 199.521 189.465 </Vector>
+<Vector action="1" obsValue="1">187.625 189.982 210.253 </Vector>
+<Vector action="3" obsValue="1">200 190 190 </Vector>
+<Vector action="1" obsValue="1">190 189.979 210.725 </Vector>
+<Vector action="1" obsValue="1">190 189.978 210.725 </Vector>
+<Vector action="1" obsValue="1">190 189.979 210.725 </Vector>
+<Vector action="1" obsValue="1">190 189.979 210.725 </Vector>
+<Vector action="3" obsValue="2">200 190 190 </Vector>
+<Vector action="0" obsValue="2">190 189.913 190.747 </Vector>
+<Vector action="2" obsValue="2">190 200.522 190.509 </Vector>
+<Vector action="1" obsValue="3">188.385 199.999 210.171 </Vector>
+<Vector action="1" obsValue="3">190 199.999 210.493 </Vector>
+<Vector action="3" obsValue="3">200 190 190 </Vector>
+<Vector action="1" obsValue="3">190 199.998 210.494 </Vector>
+<Vector action="3" obsValue="4">200 200 200 </Vector>
+<Vector action="3" obsValue="5">200 200 200 </Vector>
+<Vector action="3" obsValue="6">200 190 190 </Vector>
+<Vector action="2" obsValue="6">190 199.521 199.465 </Vector>
+<Vector action="0" obsValue="7">190 199.38 190.508 </Vector>
+<Vector action="3" obsValue="7">200 190 190 </Vector>
+<Vector action="0" obsValue="7">190 199.363 190.771 </Vector>
+<Vector action="0" obsValue="7">190 199.381 190.49 </Vector>
+<Vector action="1" obsValue="7">190 189.979 210.725 </Vector>
+<Vector action="1" obsValue="7">190 189.979 210.725 </Vector>
+<Vector action="1" obsValue="7">190 189.978 210.725 </Vector>
+<Vector action="1" obsValue="7">190 189.978 210.725 </Vector>
+<Vector action="0" obsValue="7">182.4 199.387 187.454 </Vector>
+<Vector action="0" obsValue="7">190 199.363 190.77 </Vector>
+<Vector action="2" obsValue="8">190 200.521 200.508 </Vector>
+<Vector action="3" obsValue="8">200 190 190 </Vector>
+<Vector action="1" obsValue="9">188.385 199.999 210.171 </Vector>
+<Vector action="1" obsValue="9">188.385 199.999 210.171 </Vector>
+<Vector action="1" obsValue="9">190 199.998 210.493 </Vector>
+<Vector action="1" obsValue="9">190 199.999 210.493 </Vector>
+<Vector action="1" obsValue="9">190 199.998 210.494 </Vector>
+<Vector action="3" obsValue="9">200 190 190 </Vector>
+<Vector action="3" obsValue="10">200 200 200 </Vector>
+<Vector action="3" obsValue="11">200 200 200 </Vector>
+</AlphaVector> </Policy>
