@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Policy version="0.1" type="value" model="/home/mfiore/pomdpModels/icsr/controlSpeed.pomdpx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="policyx.xsd">
+<AlphaVector vectorLength="3" numObsValue="1" numVectors="3">
+<Vector action="1" obsValue="0">135.321 143.597 132.75 </Vector>
+<Vector action="2" obsValue="0">135.755 134.459 143.163 </Vector>
+<Vector action="0" obsValue="0">143.807 132.743 132.758 </Vector>
+</AlphaVector> </Policy>

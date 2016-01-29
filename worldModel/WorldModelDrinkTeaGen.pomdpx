@@ -18,11 +18,14 @@
 	<StateVar vnamePrev="glass_capacity_0" vnameCurr="glass_capacity_1" fullyObs="true">
 		 <ValueEnum> 0 1 </ValueEnum>
 	</StateVar>
+	<StateVar vnamePrev="cup_capacity_0" vnameCurr="cup_capacity_1" fullyObs="true">
+		 <ValueEnum> 0 1 </ValueEnum>
+	</StateVar>
 	<StateVar vnamePrev="waterBottle_capacity_0" vnameCurr="waterBottle_capacity_1" fullyObs="true">
 		 <ValueEnum> 0 1 </ValueEnum>
 	</StateVar>
 	<ActionVar vname="action_agent">
-		 <ValueEnum> human_take_glass human_take_cup human_take_waterBottle human_place_glass_table human_place_glass_counter human_place_glass_fridge human_place_glass_box human_place_cup_table human_place_cup_counter human_place_cup_fridge human_place_cup_box human_place_waterBottle_table human_place_waterBottle_counter human_place_waterBottle_fridge human_place_waterBottle_box human_move_table human_move_counter human_move_fridge human_move_box human_drink_glass human_fill_glass_waterBottle </ValueEnum>
+		 <ValueEnum> human_take_glass human_take_cup human_take_waterBottle human_place_glass_table human_place_glass_counter human_place_glass_fridge human_place_glass_box human_place_cup_table human_place_cup_counter human_place_cup_fridge human_place_cup_box human_place_waterBottle_table human_place_waterBottle_counter human_place_waterBottle_fridge human_place_waterBottle_box human_move_table human_move_counter human_move_fridge human_move_box human_drink_glass human_drink_cup human_fill_glass_waterBottle human_fill_cup_waterBottle </ValueEnum>
 </ActionVar>
 	<RewardVar vname="reward_agent" />
 </Variable>
@@ -77,6 +80,18 @@
 </CondProb>
 <CondProb>
 <Var>glass_capacity_0</Var>
+<Parent>null</Parent>
+<Parameter type="TBL">
+<Entry>
+<Instance>- </Instance>
+<ProbTable>
+0.500000 0.500000 
+</ProbTable>
+</Entry>
+</Parameter>
+</CondProb>
+<CondProb>
+<Var>cup_capacity_0</Var>
 <Parent>null</Parent>
 <Parameter type="TBL">
 <Entry>
@@ -274,7 +289,25 @@
 </ProbTable>
 </Entry>
 <Entry>
+<Instance>human_drink_cup - - </Instance>
+<ProbTable>
+1.000000 0.000000 0.000000 0.000000 
+0.000000 1.000000 0.000000 0.000000 
+0.000000 0.000000 1.000000 0.000000 
+0.000000 0.000000 0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
 <Instance>human_fill_glass_waterBottle - - </Instance>
+<ProbTable>
+1.000000 0.000000 0.000000 0.000000 
+0.000000 1.000000 0.000000 0.000000 
+0.000000 0.000000 1.000000 0.000000 
+0.000000 0.000000 0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle - - </Instance>
 <ProbTable>
 1.000000 0.000000 0.000000 0.000000 
 0.000000 1.000000 0.000000 0.000000 
@@ -733,7 +766,27 @@
 </ProbTable>
 </Entry>
 <Entry>
+<Instance>human_drink_cup - * - </Instance>
+<ProbTable>
+1.000000 0.000000 0.000000 0.000000 0.000000 
+0.000000 1.000000 0.000000 0.000000 0.000000 
+0.000000 0.000000 1.000000 0.000000 0.000000 
+0.000000 0.000000 0.000000 1.000000 0.000000 
+0.000000 0.000000 0.000000 0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
 <Instance>human_fill_glass_waterBottle - * - </Instance>
+<ProbTable>
+1.000000 0.000000 0.000000 0.000000 0.000000 
+0.000000 1.000000 0.000000 0.000000 0.000000 
+0.000000 0.000000 1.000000 0.000000 0.000000 
+0.000000 0.000000 0.000000 1.000000 0.000000 
+0.000000 0.000000 0.000000 0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle - * - </Instance>
 <ProbTable>
 1.000000 0.000000 0.000000 0.000000 0.000000 
 0.000000 1.000000 0.000000 0.000000 0.000000 
@@ -1193,7 +1246,27 @@
 </ProbTable>
 </Entry>
 <Entry>
+<Instance>human_drink_cup - * - </Instance>
+<ProbTable>
+1.000000 0.000000 0.000000 0.000000 0.000000 
+0.000000 1.000000 0.000000 0.000000 0.000000 
+0.000000 0.000000 1.000000 0.000000 0.000000 
+0.000000 0.000000 0.000000 1.000000 0.000000 
+0.000000 0.000000 0.000000 0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
 <Instance>human_fill_glass_waterBottle - * - </Instance>
+<ProbTable>
+1.000000 0.000000 0.000000 0.000000 0.000000 
+0.000000 1.000000 0.000000 0.000000 0.000000 
+0.000000 0.000000 1.000000 0.000000 0.000000 
+0.000000 0.000000 0.000000 1.000000 0.000000 
+0.000000 0.000000 0.000000 0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle - * - </Instance>
 <ProbTable>
 1.000000 0.000000 0.000000 0.000000 0.000000 
 0.000000 1.000000 0.000000 0.000000 0.000000 
@@ -1653,7 +1726,27 @@
 </ProbTable>
 </Entry>
 <Entry>
+<Instance>human_drink_cup - * - </Instance>
+<ProbTable>
+1.000000 0.000000 0.000000 0.000000 0.000000 
+0.000000 1.000000 0.000000 0.000000 0.000000 
+0.000000 0.000000 1.000000 0.000000 0.000000 
+0.000000 0.000000 0.000000 1.000000 0.000000 
+0.000000 0.000000 0.000000 0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
 <Instance>human_fill_glass_waterBottle - * - </Instance>
+<ProbTable>
+1.000000 0.000000 0.000000 0.000000 0.000000 
+0.000000 1.000000 0.000000 0.000000 0.000000 
+0.000000 0.000000 1.000000 0.000000 0.000000 
+0.000000 0.000000 0.000000 1.000000 0.000000 
+0.000000 0.000000 0.000000 0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle - * - </Instance>
 <ProbTable>
 1.000000 0.000000 0.000000 0.000000 0.000000 
 0.000000 1.000000 0.000000 0.000000 0.000000 
@@ -1836,6 +1929,40 @@
 </ProbTable>
 </Entry>
 <Entry>
+<Instance>human_drink_cup * * * * * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_drink_cup - * * * * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_drink_cup - * * * * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_drink_cup - * * * * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_drink_cup - * * * * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
 <Instance>human_fill_glass_waterBottle - * * 0 * - </Instance>
 <ProbTable>
 1.000000 0.000000 
@@ -1984,296 +2111,822 @@
 0.000000 1.000000 
 </ProbTable>
 </Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle - * * * * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+</Parameter>
+</CondProb>
+<CondProb>
+<Var>cup_capacity_1</Var>
+<Parent>action_agent cup_capacity_0 cup_isAt_0 waterBottle_isAt_0 waterBottle_capacity_0 human_isAt_0 </Parent>
+<Parameter type="TBL">
+<Entry>
+<Instance>human_take_glass - * * * * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_take_cup - * * * * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_take_waterBottle - * * * * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_place_glass_table - * * * * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_place_glass_counter - * * * * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_place_glass_fridge - * * * * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_place_glass_box - * * * * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_place_cup_table - * * * * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_place_cup_counter - * * * * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_place_cup_fridge - * * * * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_place_cup_box - * * * * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_place_waterBottle_table - * * * * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_place_waterBottle_counter - * * * * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_place_waterBottle_fridge - * * * * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_place_waterBottle_box - * * * * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_move_table - * * * * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_move_counter - * * * * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_move_fridge - * * * * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_move_box - * * * * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_drink_glass * * * * * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_drink_glass - * * * * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_drink_glass - * * * * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_drink_glass - * * * * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_drink_glass - * * * * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_drink_cup * * * * * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_drink_cup - * * * * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_drink_cup - * * * * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_drink_cup - * * * * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_drink_cup - * * * * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_glass_waterBottle - * * * * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle - * * 0 * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle * human human 1 * - </Instance>
+<ProbTable>
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle * table human 1 table - </Instance>
+<ProbTable>
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle - table human 1 counter - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle - table human 1 fridge - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle - table human 1 box - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle - counter human 1 table - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle * counter human 1 counter - </Instance>
+<ProbTable>
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle - counter human 1 fridge - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle - counter human 1 box - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle - fridge human 1 table - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle - fridge human 1 counter - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle * fridge human 1 fridge - </Instance>
+<ProbTable>
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle - fridge human 1 box - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle - box human 1 table - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle - box human 1 counter - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle - box human 1 fridge - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle * box human 1 box - </Instance>
+<ProbTable>
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle - * table 1 * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle - * counter 1 * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle - * fridge 1 * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle - * box 1 * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
 </Parameter>
 </CondProb>
 <CondProb>
 <Var>waterBottle_capacity_1</Var>
-<Parent>action_agent waterBottle_capacity_0 waterBottle_isAt_0 glass_isAt_0 human_isAt_0 </Parent>
+<Parent>action_agent waterBottle_capacity_0 waterBottle_isAt_0 glass_isAt_0 cup_isAt_0 human_isAt_0 </Parent>
 <Parameter type="TBL">
 <Entry>
-<Instance>human_take_glass - * * * - </Instance>
+<Instance>human_take_glass - * * * * - </Instance>
 <ProbTable>
 1.000000 0.000000 
 0.000000 1.000000 
 </ProbTable>
 </Entry>
 <Entry>
-<Instance>human_take_cup - * * * - </Instance>
+<Instance>human_take_cup - * * * * - </Instance>
 <ProbTable>
 1.000000 0.000000 
 0.000000 1.000000 
 </ProbTable>
 </Entry>
 <Entry>
-<Instance>human_take_waterBottle - * * * - </Instance>
+<Instance>human_take_waterBottle - * * * * - </Instance>
 <ProbTable>
 1.000000 0.000000 
 0.000000 1.000000 
 </ProbTable>
 </Entry>
 <Entry>
-<Instance>human_place_glass_table - * * * - </Instance>
+<Instance>human_place_glass_table - * * * * - </Instance>
 <ProbTable>
 1.000000 0.000000 
 0.000000 1.000000 
 </ProbTable>
 </Entry>
 <Entry>
-<Instance>human_place_glass_counter - * * * - </Instance>
+<Instance>human_place_glass_counter - * * * * - </Instance>
 <ProbTable>
 1.000000 0.000000 
 0.000000 1.000000 
 </ProbTable>
 </Entry>
 <Entry>
-<Instance>human_place_glass_fridge - * * * - </Instance>
+<Instance>human_place_glass_fridge - * * * * - </Instance>
 <ProbTable>
 1.000000 0.000000 
 0.000000 1.000000 
 </ProbTable>
 </Entry>
 <Entry>
-<Instance>human_place_glass_box - * * * - </Instance>
+<Instance>human_place_glass_box - * * * * - </Instance>
 <ProbTable>
 1.000000 0.000000 
 0.000000 1.000000 
 </ProbTable>
 </Entry>
 <Entry>
-<Instance>human_place_cup_table - * * * - </Instance>
+<Instance>human_place_cup_table - * * * * - </Instance>
 <ProbTable>
 1.000000 0.000000 
 0.000000 1.000000 
 </ProbTable>
 </Entry>
 <Entry>
-<Instance>human_place_cup_counter - * * * - </Instance>
+<Instance>human_place_cup_counter - * * * * - </Instance>
 <ProbTable>
 1.000000 0.000000 
 0.000000 1.000000 
 </ProbTable>
 </Entry>
 <Entry>
-<Instance>human_place_cup_fridge - * * * - </Instance>
+<Instance>human_place_cup_fridge - * * * * - </Instance>
 <ProbTable>
 1.000000 0.000000 
 0.000000 1.000000 
 </ProbTable>
 </Entry>
 <Entry>
-<Instance>human_place_cup_box - * * * - </Instance>
+<Instance>human_place_cup_box - * * * * - </Instance>
 <ProbTable>
 1.000000 0.000000 
 0.000000 1.000000 
 </ProbTable>
 </Entry>
 <Entry>
-<Instance>human_place_waterBottle_table - * * * - </Instance>
+<Instance>human_place_waterBottle_table - * * * * - </Instance>
 <ProbTable>
 1.000000 0.000000 
 0.000000 1.000000 
 </ProbTable>
 </Entry>
 <Entry>
-<Instance>human_place_waterBottle_counter - * * * - </Instance>
+<Instance>human_place_waterBottle_counter - * * * * - </Instance>
 <ProbTable>
 1.000000 0.000000 
 0.000000 1.000000 
 </ProbTable>
 </Entry>
 <Entry>
-<Instance>human_place_waterBottle_fridge - * * * - </Instance>
+<Instance>human_place_waterBottle_fridge - * * * * - </Instance>
 <ProbTable>
 1.000000 0.000000 
 0.000000 1.000000 
 </ProbTable>
 </Entry>
 <Entry>
-<Instance>human_place_waterBottle_box - * * * - </Instance>
+<Instance>human_place_waterBottle_box - * * * * - </Instance>
 <ProbTable>
 1.000000 0.000000 
 0.000000 1.000000 
 </ProbTable>
 </Entry>
 <Entry>
-<Instance>human_move_table - * * * - </Instance>
+<Instance>human_move_table - * * * * - </Instance>
 <ProbTable>
 1.000000 0.000000 
 0.000000 1.000000 
 </ProbTable>
 </Entry>
 <Entry>
-<Instance>human_move_counter - * * * - </Instance>
+<Instance>human_move_counter - * * * * - </Instance>
 <ProbTable>
 1.000000 0.000000 
 0.000000 1.000000 
 </ProbTable>
 </Entry>
 <Entry>
-<Instance>human_move_fridge - * * * - </Instance>
+<Instance>human_move_fridge - * * * * - </Instance>
 <ProbTable>
 1.000000 0.000000 
 0.000000 1.000000 
 </ProbTable>
 </Entry>
 <Entry>
-<Instance>human_move_box - * * * - </Instance>
+<Instance>human_move_box - * * * * - </Instance>
 <ProbTable>
 1.000000 0.000000 
 0.000000 1.000000 
 </ProbTable>
 </Entry>
 <Entry>
-<Instance>human_drink_glass - * * * - </Instance>
+<Instance>human_drink_glass - * * * * - </Instance>
 <ProbTable>
 1.000000 0.000000 
 0.000000 1.000000 
 </ProbTable>
 </Entry>
 <Entry>
-<Instance>human_fill_glass_waterBottle - * * * - </Instance>
+<Instance>human_drink_cup - * * * * - </Instance>
 <ProbTable>
 1.000000 0.000000 
 0.000000 1.000000 
 </ProbTable>
 </Entry>
 <Entry>
-<Instance>human_fill_glass_waterBottle 1 human human * - </Instance>
-<ProbTable>
-1.000000 0.000000 
-</ProbTable>
-</Entry>
-<Entry>
-<Instance>human_fill_glass_waterBottle 1 human table table - </Instance>
-<ProbTable>
-1.000000 0.000000 
-</ProbTable>
-</Entry>
-<Entry>
-<Instance>human_fill_glass_waterBottle - human table counter - </Instance>
+<Instance>human_fill_glass_waterBottle - * * * * - </Instance>
 <ProbTable>
 1.000000 0.000000 
 0.000000 1.000000 
 </ProbTable>
 </Entry>
 <Entry>
-<Instance>human_fill_glass_waterBottle - human table fridge - </Instance>
+<Instance>human_fill_glass_waterBottle 1 human human * * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_glass_waterBottle 1 human table * table - </Instance>
+<ProbTable>
+1.000000 0.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_glass_waterBottle - human table * counter - </Instance>
 <ProbTable>
 1.000000 0.000000 
 0.000000 1.000000 
 </ProbTable>
 </Entry>
 <Entry>
-<Instance>human_fill_glass_waterBottle - human table box - </Instance>
+<Instance>human_fill_glass_waterBottle - human table * fridge - </Instance>
 <ProbTable>
 1.000000 0.000000 
 0.000000 1.000000 
 </ProbTable>
 </Entry>
 <Entry>
-<Instance>human_fill_glass_waterBottle - human counter table - </Instance>
+<Instance>human_fill_glass_waterBottle - human table * box - </Instance>
 <ProbTable>
 1.000000 0.000000 
 0.000000 1.000000 
 </ProbTable>
 </Entry>
 <Entry>
-<Instance>human_fill_glass_waterBottle * human counter counter - </Instance>
-<ProbTable>
-1.000000 0.000000 
-</ProbTable>
-</Entry>
-<Entry>
-<Instance>human_fill_glass_waterBottle - human counter fridge - </Instance>
+<Instance>human_fill_glass_waterBottle - human counter * table - </Instance>
 <ProbTable>
 1.000000 0.000000 
 0.000000 1.000000 
 </ProbTable>
 </Entry>
 <Entry>
-<Instance>human_fill_glass_waterBottle - human counter box - </Instance>
+<Instance>human_fill_glass_waterBottle * human counter * counter - </Instance>
+<ProbTable>
+1.000000 0.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_glass_waterBottle - human counter * fridge - </Instance>
 <ProbTable>
 1.000000 0.000000 
 0.000000 1.000000 
 </ProbTable>
 </Entry>
 <Entry>
-<Instance>human_fill_glass_waterBottle - human fridge table - </Instance>
+<Instance>human_fill_glass_waterBottle - human counter * box - </Instance>
 <ProbTable>
 1.000000 0.000000 
 0.000000 1.000000 
 </ProbTable>
 </Entry>
 <Entry>
-<Instance>human_fill_glass_waterBottle - human fridge counter - </Instance>
+<Instance>human_fill_glass_waterBottle - human fridge * table - </Instance>
 <ProbTable>
 1.000000 0.000000 
 0.000000 1.000000 
 </ProbTable>
 </Entry>
 <Entry>
-<Instance>human_fill_glass_waterBottle * human fridge fridge - </Instance>
-<ProbTable>
-1.000000 0.000000 
-</ProbTable>
-</Entry>
-<Entry>
-<Instance>human_fill_glass_waterBottle - human fridge box - </Instance>
+<Instance>human_fill_glass_waterBottle - human fridge * counter - </Instance>
 <ProbTable>
 1.000000 0.000000 
 0.000000 1.000000 
 </ProbTable>
 </Entry>
 <Entry>
-<Instance>human_fill_glass_waterBottle - human box table - </Instance>
+<Instance>human_fill_glass_waterBottle * human fridge * fridge - </Instance>
+<ProbTable>
+1.000000 0.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_glass_waterBottle - human fridge * box - </Instance>
 <ProbTable>
 1.000000 0.000000 
 0.000000 1.000000 
 </ProbTable>
 </Entry>
 <Entry>
-<Instance>human_fill_glass_waterBottle - human box counter - </Instance>
+<Instance>human_fill_glass_waterBottle - human box * table - </Instance>
 <ProbTable>
 1.000000 0.000000 
 0.000000 1.000000 
 </ProbTable>
 </Entry>
 <Entry>
-<Instance>human_fill_glass_waterBottle - human box fridge - </Instance>
+<Instance>human_fill_glass_waterBottle - human box * counter - </Instance>
 <ProbTable>
 1.000000 0.000000 
 0.000000 1.000000 
 </ProbTable>
 </Entry>
 <Entry>
-<Instance>human_fill_glass_waterBottle * human box box - </Instance>
-<ProbTable>
-1.000000 0.000000 
-</ProbTable>
-</Entry>
-<Entry>
-<Instance>human_fill_glass_waterBottle - table * * - </Instance>
+<Instance>human_fill_glass_waterBottle - human box * fridge - </Instance>
 <ProbTable>
 1.000000 0.000000 
 0.000000 1.000000 
 </ProbTable>
 </Entry>
 <Entry>
-<Instance>human_fill_glass_waterBottle - counter * * - </Instance>
+<Instance>human_fill_glass_waterBottle * human box * box - </Instance>
+<ProbTable>
+1.000000 0.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_glass_waterBottle - table * * * - </Instance>
 <ProbTable>
 1.000000 0.000000 
 0.000000 1.000000 
 </ProbTable>
 </Entry>
 <Entry>
-<Instance>human_fill_glass_waterBottle - fridge * * - </Instance>
+<Instance>human_fill_glass_waterBottle - counter * * * - </Instance>
 <ProbTable>
 1.000000 0.000000 
 0.000000 1.000000 
 </ProbTable>
 </Entry>
 <Entry>
-<Instance>human_fill_glass_waterBottle - box * * - </Instance>
+<Instance>human_fill_glass_waterBottle - fridge * * * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_glass_waterBottle - box * * * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle - * * * * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle 1 human * human * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle 1 human * table table - </Instance>
+<ProbTable>
+1.000000 0.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle - human * table counter - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle - human * table fridge - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle - human * table box - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle - human * counter table - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle * human * counter counter - </Instance>
+<ProbTable>
+1.000000 0.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle - human * counter fridge - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle - human * counter box - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle - human * fridge table - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle - human * fridge counter - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle * human * fridge fridge - </Instance>
+<ProbTable>
+1.000000 0.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle - human * fridge box - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle - human * box table - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle - human * box counter - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle - human * box fridge - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle * human * box box - </Instance>
+<ProbTable>
+1.000000 0.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle - table * * * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle - counter * * * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle - fridge * * * - </Instance>
+<ProbTable>
+1.000000 0.000000 
+0.000000 1.000000 
+</ProbTable>
+</Entry>
+<Entry>
+<Instance>human_fill_cup_waterBottle - box * * * - </Instance>
 <ProbTable>
 1.000000 0.000000 
 0.000000 1.000000 
@@ -2282,23 +2935,4 @@
 </Parameter>
 </CondProb>
 </StateTransitionFunction>
-
-
-  <RewardFunction>
-  	<Func>
-      <Var>reward_agent</Var>
-      <Parent>action_agent glass_isAt_0 glass_capacity_0</Parent>
-      <Parameter type = "TBL">
-
-   
-        <Entry>
-          <Instance>human_drink_glass human 1  </Instance>
-          <ValueTable>
-             100 
-          </ValueTable>
-          </Entry>
-
-      </Parameter>
-    </Func>
-  </RewardFunction>   
 </pomdpx>

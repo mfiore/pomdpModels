@@ -2282,23 +2282,4 @@
 </Parameter>
 </CondProb>
 </StateTransitionFunction>
-
-
-  <RewardFunction>
-  	<Func>
-      <Var>reward_agent</Var>
-      <Parent>action_agent glass_isAt_0 glass_capacity_0</Parent>
-      <Parameter type = "TBL">
-
-   
-        <Entry>
-          <Instance>human_drink_glass human 1  </Instance>
-          <ValueTable>
-             100 
-          </ValueTable>
-          </Entry>
-
-      </Parameter>
-    </Func>
-  </RewardFunction>   
 </pomdpx>

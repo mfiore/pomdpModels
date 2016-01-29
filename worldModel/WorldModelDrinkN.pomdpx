@@ -18,7 +18,7 @@
 	<StateVar vnamePrev="glass_capacity_0" vnameCurr="glass_capacity_1" fullyObs="true">
 		 <ValueEnum> 0 1 </ValueEnum>
 	</StateVar>
-	<StateVar vnamePrev="waterBottle_capacity_0" vnameCurr="waterBottle_capacity_1" fullyObs="true">
+	<StateVar vnamePrev="waterBottle_capacity_0" vnameCurr="waterBottle_capacity_0" fullyObs="true">
 		 <ValueEnum> 0 1 </ValueEnum>
 	</StateVar>
 	<ActionVar vname="action_agent">
@@ -102,7 +102,7 @@
 </InitialStateBelief>
 <StateTransitionFunction>
 <CondProb>
-<Var>human_isAt_1</Var>
+<Var>human_isAt_0</Var>
 <Parent>action_agent human_isAt_0 </Parent>
 <Parameter type="TBL">
 <Entry>
@@ -285,7 +285,7 @@
 </Parameter>
 </CondProb>
 <CondProb>
-<Var>glass_isAt_1</Var>
+<Var>glass_isAt_0</Var>
 <Parent>action_agent glass_isAt_0 human_isAt_0 </Parent>
 <Parameter type="TBL">
 <Entry>
@@ -745,7 +745,7 @@
 </Parameter>
 </CondProb>
 <CondProb>
-<Var>cup_isAt_1</Var>
+<Var>cup_isAt_0</Var>
 <Parent>action_agent cup_isAt_0 human_isAt_0 </Parent>
 <Parameter type="TBL">
 <Entry>
@@ -1205,7 +1205,7 @@
 </Parameter>
 </CondProb>
 <CondProb>
-<Var>waterBottle_isAt_1</Var>
+<Var>waterBottle_isAt_0</Var>
 <Parent>action_agent waterBottle_isAt_0 human_isAt_0 </Parent>
 <Parameter type="TBL">
 <Entry>
@@ -1665,7 +1665,7 @@
 </Parameter>
 </CondProb>
 <CondProb>
-<Var>glass_capacity_1</Var>
+<Var>glass_capacity_0</Var>
 <Parent>action_agent glass_capacity_0 glass_isAt_0 waterBottle_isAt_0 waterBottle_capacity_0 human_isAt_0 </Parent>
 <Parameter type="TBL">
 <Entry>
@@ -1987,7 +1987,7 @@
 </Parameter>
 </CondProb>
 <CondProb>
-<Var>waterBottle_capacity_1</Var>
+<Var>waterBottle_capacity_0</Var>
 <Parent>action_agent waterBottle_capacity_0 waterBottle_isAt_0 glass_isAt_0 human_isAt_0 </Parent>
 <Parameter type="TBL">
 <Entry>
